@@ -1,6 +1,7 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
-from django.http import HttpResponse
+from django.urls import include, path
 
 # Create your views here.
 def home(rquest):
