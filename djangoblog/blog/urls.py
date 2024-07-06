@@ -2,12 +2,11 @@ from django.contrib import admin
 # blog/urls.py
 
 from django.urls import path
-from .views import Home
+from blog.views import Home, Article
 
-# urlpatterns = [
-#     path('', home, name='home'),  # Define the URL pattern for the home view
-# ]
+
 
 urlpatterns = [
-    path('', Home.as_view)
+    path('', Home.as_view(), name='home'),
+    path('article', Article.as_view())
 ]
